@@ -13,7 +13,7 @@ export const profile = {
     youtube: 'https://www.youtube.com/c/codingtutorialMIU',
     branding: 'codingtutorialMIU',
   },
-  resumePath: '/mnt/data/Main CV.docx',
+  resumePath: '/Main CV.pdf',
   location: 'Cairo, Egypt',
   profile:
     'Full-Stack Developer at CTC MENA skilled in HTML, CSS, JavaScript, React.js, Three.js, Tailwind, TypeScript, and GitHub. Experienced in C++, building interactive, performance-focused projects, and committed to user-friendly web interfaces. Maintained a 3.8 GPA through continuous learning.',
