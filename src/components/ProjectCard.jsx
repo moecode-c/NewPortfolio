@@ -6,8 +6,8 @@ const ProjectCard = ({ project, onSelect }) => {
     <motion.button
       type="button"
       onClick={() => onSelect(project)}
-      className="group flex flex-col rounded-2xl border border-white/5 bg-gradient-to-b from-[#041014] via-[#02080a] to-[#000] p-5 text-left shadow-lg transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-neon/60"
-      whileHover={{ y: -6, boxShadow: '0 25px 60px rgba(0, 255, 170, 0.15)' }}
+      className="group flex flex-col rounded-2xl border border-white/10 bg-gradient-to-b from-slateGlow/60 via-midnight/80 to-black p-5 text-left shadow-lg transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-neon/60"
+      whileHover={{ y: -6, boxShadow: '0 25px 60px rgba(0, 255, 170, 0.2)' }}
     >
       <div className="relative overflow-hidden rounded-xl border border-white/10">
         <img
@@ -29,7 +29,7 @@ const ProjectCard = ({ project, onSelect }) => {
         <p className="text-sm text-slate-400">{project.description}</p>
         <div className="flex flex-wrap gap-2 text-[0.65rem] uppercase tracking-wider text-cyberGray">
           {project.tech.map((item) => (
-            <span key={item} className="rounded-full border border-white/10 px-3 py-1">
+            <span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
               {item}
             </span>
           ))}

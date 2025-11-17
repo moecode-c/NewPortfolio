@@ -38,7 +38,7 @@ const Navbar = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -40, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 right-0 z-40 border-b border-white/5 bg-[radial-gradient(circle_at_top,_rgba(0,255,170,0.12),_transparent_65%)] bg-base/90 backdrop-blur-xl"
+            className="fixed top-0 left-0 right-0 z-40 border-b border-white/10 bg-gradient-to-r from-midnight/95 via-slateGlow/80 to-black/80 backdrop-blur-xl shadow-[0_15px_40px_rgba(3,7,11,0.65)]"
           >
             <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
               <Link to="/" className="text-xl font-bold uppercase tracking-[0.4em] text-neon drop-shadow-glow">
@@ -49,8 +49,10 @@ const Navbar = () => {
                   <Link
                     key={link.path}
                     to={link.path}
-                    className={`flex items-center gap-2 px-3 py-2 rounded transition-colors ${
-                      location.pathname === link.path ? 'bg-neon/10 text-neon shadow-glow' : 'text-slate-300 hover:text-neon hover:bg-neon/5'
+                    className={`flex items-center gap-2 rounded-full px-3 py-2 transition-colors ease-soft-spring ${
+                      location.pathname === link.path
+                        ? 'bg-neon/15 text-neon shadow-glow'
+                        : 'text-slate-200 hover:text-white hover:bg-white/5'
                     }`}
                   >
                     <link.icon className="text-neon/80 text-lg" aria-hidden />
@@ -61,7 +63,7 @@ const Navbar = () => {
               </div>
               <button
                 type="button"
-                className="relative h-10 w-12 rounded border border-white/10 text-slate-200 md:hidden"
+                className="relative h-10 w-12 rounded border border-white/15 text-slate-100/90 backdrop-blur hover:border-neon/40 md:hidden"
                 aria-expanded={menuOpen}
                 aria-controls="mobile-nav"
                 onClick={() => setMenuOpen((prev) => !prev)}
@@ -86,15 +88,17 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="border-t border-white/5 bg-surface/95 px-6 pb-8 pt-4 text-base md:hidden"
+                  className="border-t border-white/10 bg-surface/95 px-6 pb-8 pt-4 text-base md:hidden"
                 >
                   <div className="flex flex-col gap-4">
                     {navLinks.map((link) => (
                       <Link
                         key={link.path}
                         to={link.path}
-                        className={`flex items-center gap-2 px-3 py-2 rounded ${
-                          location.pathname === link.path ? 'bg-neon/10 text-neon shadow-glow' : 'text-slate-200 hover:text-neon hover:bg-neon/5'
+                        className={`flex items-center gap-2 px-3 py-2 rounded-full ${
+                          location.pathname === link.path
+                            ? 'bg-neon/20 text-neon'
+                            : 'text-slate-200 hover:text-white hover:bg-white/5'
                         }`}
                       >
                         <link.icon className="text-neon/80 text-lg" aria-hidden />

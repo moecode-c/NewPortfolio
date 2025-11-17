@@ -7,17 +7,20 @@
 :root {
   color-scheme: dark;
   font-family: 'Space Grotesk', 'JetBrains Mono', monospace;
-  background-color: #050505;
+  background-color: #03070b;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #050505;
+  background: radial-gradient(circle at 20% 20%, rgba(0, 255, 170, 0.15), transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(0, 188, 212, 0.18), transparent 45%),
+    linear-gradient(160deg, #020409, #010305 45%, #021815 100%);
   color: #f4f6fb;
   font-family: 'Space Grotesk', 'JetBrains Mono', monospace;
   position: relative;
   overflow-x: hidden;
+  transition: background 600ms ease, color 250ms ease;
 }
 
 body::before,
@@ -30,18 +33,18 @@ body::after {
 }
 
 body::before {
-  background-image: radial-gradient(circle at center, rgba(0, 255, 170, 0.15), transparent 55%),
-    linear-gradient(90deg, rgba(0, 255, 170, 0.06) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(0, 255, 170, 0.06) 1px, transparent 1px);
-  background-size: 100% 100%, 70px 70px, 70px 70px;
+  background-image: radial-gradient(circle at center, rgba(0, 255, 170, 0.1), transparent 60%),
+    linear-gradient(90deg, rgba(0, 255, 170, 0.02) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(0, 255, 170, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 80px 80px, 80px 80px;
   mix-blend-mode: screen;
 }
 
 body::after {
   background-image: linear-gradient(rgba(0, 0, 0, 0) 90%, rgba(0, 255, 200, 0.08) 95%);
   background-size: 100% 4px;
-  opacity: 0.4;
-  animation: scanlines 6s linear infinite;
+  opacity: 0.35;
+  animation: scanlines 8s linear infinite;
 }
 
 @keyframes scanlines {
@@ -55,4 +58,14 @@ body::after {
 
 #root {
   min-height: 100vh;
+}
+
+button,
+a,
+.card,
+input,
+textarea {
+  transition-property: color, background-color, border-color, box-shadow, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }

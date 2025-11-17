@@ -7,6 +7,7 @@ import DownloadResumeButton from '../components/DownloadResumeButton'
 import ProjectCard from '../components/ProjectCard'
 import TextType from '../components/TextType'
 import CurvedLoop from '../components/CurvedLoop'
+import LogoLoop from '../components/LogoLoop'
 import { stats } from '../data/stats'
 import { projects } from '../data/projects'
 import { profile } from '../data/profile'
@@ -16,6 +17,15 @@ const Home = () => {
   const previewProjects = projects.slice(0, 3)
   const primaryExperience = profile.experience.slice(0, 3)
   const extracurriculars = profile.extracurriculars
+  const loopBrands = [
+    { node: <span className="font-semibold text-neon">React</span> },
+    { node: <span className="font-semibold text-neon">MERN</span> },
+    { node: <span className="font-semibold text-neon">Three.js</span> },
+    { node: <span className="font-semibold text-neon">TypeScript</span> },
+    { node: <span className="font-semibold text-neon">WebGL</span> },
+    { node: <span className="font-semibold text-neon">Tailwind</span> },
+    { node: <span className="font-semibold text-neon">Mentor</span> },
+  ]
 
   return (
     <motion.section
@@ -26,7 +36,7 @@ const Home = () => {
       transition={{ duration: 0.4 }}
     >
       <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
-        <div className="relative overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-br from-[#071c15] via-[#03100c] to-[#010304] p-8 shadow-[0_20px_140px_rgba(0,255,170,0.15)]">
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-midnight via-pulse to-slateGlow p-8 shadow-[0_20px_140px_rgba(0,255,170,0.12)]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,255,170,0.25),_transparent_55%)]" aria-hidden />
           <div className="relative space-y-8">
             <p className="text-xs uppercase tracking-[0.6em] text-neon">{profile.title}</p>
@@ -80,7 +90,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-b from-[#04121c] via-[#02070b] to-[#000] p-6">
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-slateGlow/70 via-midnight/90 to-black p-6">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,188,212,0.35),_transparent_70%)] blur-2xl" aria-hidden />
           <div className="relative flex h-full flex-col">
             <p className="text-xs uppercase tracking-[0.4em] text-neon/80">3D Ops Scanner</p>
@@ -108,6 +118,18 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="rounded-3xl border border-white/10 bg-gradient-to-r from-midnight/80 via-slateGlow/60 to-black/70 p-4 shadow-[0_20px_60px_rgba(2,6,10,0.6)]">
+        <LogoLoop
+          logos={loopBrands}
+          gap={48}
+          speed={120}
+          logoHeight={30}
+          fadeOut
+          scaleOnHover
+          ariaLabel="Technologies and focus areas"
+        />
+      </div>
+
       <div className="space-y-2 w-screen max-w-none relative left-1/2 right-1/2 -translate-x-1/2">
         <CurvedLoop
           marqueeText="SECURE BUILDS • MERN • 3D SYSTEMS • ZERO-DOWNTIME • COACHING • CYBER INSPIRED • "
@@ -127,7 +149,7 @@ const Home = () => {
         />
       </div>
 
-      <div className="relative rounded-3xl border border-white/5 bg-gradient-to-tr from-[#041212] via-[#020606] to-[#000] p-6">
+      <div className="relative rounded-3xl border border-white/10 bg-gradient-to-tr from-midnight/80 via-slateGlow/70 to-black/90 p-6">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,255,170,0.2),_transparent_70%)] opacity-80" aria-hidden />
         <div className="relative">
           <StatsDashboard stats={stats} />
@@ -136,7 +158,7 @@ const Home = () => {
 
       <section className="grid gap-6 md:grid-cols-2">
         {primaryExperience.map((entry) => (
-          <div key={entry.role} className="rounded-3xl border border-white/5 bg-gradient-to-b from-[#041013] via-[#020809] to-[#000] p-6 text-sm text-slate-200">
+          <div key={entry.role} className="rounded-3xl border border-white/10 bg-gradient-to-b from-slateGlow/70 via-midnight/80 to-black p-6 text-sm text-slate-200">
             <p className="text-xs uppercase tracking-[0.5em] text-neon">{entry.timeline}</p>
             <h3 className="mt-2 text-xl font-semibold text-white">{entry.role}</h3>
             <p className="text-slate-400">{entry.company} · {entry.location}</p>
@@ -166,7 +188,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="rounded-3xl border border-white/5 bg-gradient-to-br from-[#030b13] via-[#031a15] to-[#020507] p-6">
+      <section className="rounded-3xl border border-white/10 bg-gradient-to-br from-midnight/80 via-pulse/60 to-black p-6">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.4em] text-neon">Extracurricular radar</p>

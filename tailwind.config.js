@@ -10,6 +10,11 @@ export default {
         neon: '#00ffaa',
         neonBlue: '#00bcd4',
         cyberGray: '#9ba9b4',
+        midnight: '#03070b',
+        pulse: '#0b3b2c',
+        aurora: '#1c676b',
+        ember: '#ff5f6d',
+        slateGlow: '#1b2330',
       },
       fontFamily: {
         techno: ['"Space Grotesk"', '"JetBrains Mono"', 'monospace'],
@@ -23,6 +28,12 @@ export default {
       animation: {
         'pulse-slow': 'pulse 4s ease-in-out infinite',
         scan: 'scan 6s linear infinite',
+      },
+      transitionTimingFunction: {
+        'soft-spring': 'cubic-bezier(0.22, 1, 0.36, 1)',
+      },
+      transitionDuration: {
+        DEFAULT: '250ms',
       },
       keyframes: {
         scan: {

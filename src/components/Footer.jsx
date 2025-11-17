@@ -4,7 +4,7 @@ import { profile } from '../data/profile'
 
 const Footer = () => {
   return (
-    <footer className="border-t border-white/5 bg-gradient-to-b from-[#010304] via-[#040d0e] to-[#000] py-10 text-sm text-slate-400">
+    <footer className="border-t border-white/10 bg-gradient-to-b from-midnight via-slateGlow/40 to-black py-10 text-sm text-slate-300">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.5em] text-neon">{profile.name}</p>

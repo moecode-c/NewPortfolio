@@ -11,7 +11,7 @@ const CompactNavbar = ({ isVisible, navLinks, currentPath }) => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -80, opacity: 0 }}
           transition={{ duration: 0.35 }}
-          className="fixed top-4 left-0 right-0 z-50 mx-auto hidden max-w-4xl w-full rounded-full border border-neon/20 bg-gradient-to-r from-[#03120f]/95 via-[#010607]/95 to-[#000]/95 px-6 py-3 text-xs shadow-glow backdrop-blur md:flex"
+          className="fixed top-4 left-0 right-0 z-50 mx-auto hidden max-w-4xl w-full rounded-full border border-white/10 bg-gradient-to-r from-midnight/95 via-slateGlow/85 to-black/80 px-6 py-3 text-xs shadow-[0_12px_35px_rgba(3,7,11,0.65)] backdrop-blur md:flex"
         >
           <div className="flex items-center justify-between gap-6">
             <div className="hidden items-center gap-4 lg:flex">
@@ -20,7 +20,7 @@ const CompactNavbar = ({ isVisible, navLinks, currentPath }) => {
                   key={link.path}
                   to={link.path}
                   className={`tracking-[0.2em] uppercase transition-colors ${
-                    currentPath === link.path ? 'text-neon' : 'text-slate-300 hover:text-neon'
+                    currentPath === link.path ? 'text-neon' : 'text-slate-300 hover:text-white'
                   }`}
                 >
                   <span className="flex items-center gap-2">
