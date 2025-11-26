@@ -37,6 +37,7 @@ const Projects = () => {
       <header className="space-y-4 rounded-3xl border border-white/10 bg-gradient-to-br from-midnight/85 via-slateGlow/70 to-black/90 p-6">
         <p className="text-xs uppercase tracking-[0.5em] text-neon">/projects</p>
         <h1 className="text-3xl font-semibold text-white">Operational portfolio</h1>
+        <p className="text-neon text-lg font-bold">{`Total Projects: ${projects.length}`}</p>
         <p className="text-slate-300">
           Explore my portfolio of real-world projects: client websites, 3D apps, e-learning platforms, and SaaS dashboards built with React, MERN, and Three.js. Each card shows a project I’ve designed, shipped, or am actively building—click for details and tech breakdowns.
         </p>
