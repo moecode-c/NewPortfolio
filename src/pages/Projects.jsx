@@ -7,24 +7,47 @@ import ProjectModal from '../components/ProjectModal'
 
 const filters = ['All', 'Frontend', 'Fullstack', 'MERN', '3D', 'Other']
 
-const projectCategories = {
-  1: ['Fullstack', 'MERN'],
-  2: ['Frontend', '3D'],
-  3: ['Frontend', 'Other'],
-  4: ['Fullstack', 'MERN', '3D'],
-  5: ['Frontend', 'Other'],
-  6: ['3D', 'Other'],
-  7: ['Fullstack', 'MERN'],
+const deriveCategories = (project) => {
+  const tech = (project.tech ?? []).map((item) => String(item).toLowerCase())
+
+  const hasMern = tech.includes('mern')
+  const has3d = tech.some((item) => item === '3d' || item.includes('three'))
+  const hasBackend =
+    hasMern ||
+    tech.includes('fullstack') ||
+    tech.some((item) => ['node', 'mongodb', 'express', 'php', 'laravel', 'sql'].includes(item))
+  const hasFrontend = tech.some((item) =>
+    ['react', 'next.js', 'typescript', 'zustand', 'framer', 'css', 'api'].includes(item),
+  )
+
+  const categories = []
+  if (hasBackend) categories.push('Fullstack')
+  if (hasFrontend && !hasBackend) categories.push('Frontend')
+  if (hasMern) categories.push('MERN')
+  if (has3d) categories.push('3D')
+  if (categories.length === 0) categories.push('Other')
+  return categories
 }
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All')
+  const [searchQuery, setSearchQuery] = useState('')
   const [selectedProject, setSelectedProject] = useState(null)
 
   const filteredProjects = useMemo(() => {
-    if (activeFilter === 'All') return projects
-    return projects.filter((project) => projectCategories[project.id]?.includes(activeFilter))
-  }, [activeFilter])
+    const normalizedQuery = searchQuery.trim().toLowerCase()
+
+    return projects.filter((project) => {
+      const matchesFilter =
+        activeFilter === 'All' || deriveCategories(project).includes(activeFilter)
+
+      if (!matchesFilter) return false
+      if (!normalizedQuery) return true
+
+      const haystack = [project.title, project.description, (project.tech ?? []).join(' ')].join(' ').toLowerCase()
+      return haystack.includes(normalizedQuery)
+    })
+  }, [activeFilter, searchQuery])
 
   return (
     <motion.section
@@ -47,23 +70,33 @@ const Projects = () => {
         <p className="mb-3 flex items-center gap-2 text-xs uppercase tracking-[0.4em] text-neon/80">
           <LuFilter aria-hidden /> Filter Projects
         </p>
-        <div className="flex flex-wrap gap-3">
-        {filters.map((filter) => (
-          <motion.button
-            key={filter}
-            type="button"
-            onClick={() => setActiveFilter(filter)}
-            className={`rounded-full px-5 py-2 text-xs uppercase tracking-[0.3em] transition ${
-              activeFilter === filter
-                ? 'border border-neon/70 bg-neon/15 text-neon shadow-glow'
-                : 'border border-white/15 text-slate-300 hover:text-white'
-            }`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {filter}
-          </motion.button>
-        ))}
+        <div className="flex flex-col gap-3 md:flex-row md:items-center">
+          <input
+            type="search"
+            value={searchQuery}
+            onChange={(event) => setSearchQuery(event.target.value)}
+            placeholder="Search projects..."
+            aria-label="Search projects"
+            className="w-full rounded-full border border-white/15 bg-black/20 px-5 py-2 text-sm text-slate-200 placeholder:text-slate-500 outline-none transition focus:border-neon/40 focus:ring-2 focus:ring-neon/20 md:max-w-sm"
+          />
+          <div className="flex flex-wrap gap-3">
+            {filters.map((filter) => (
+              <motion.button
+                key={filter}
+                type="button"
+                onClick={() => setActiveFilter(filter)}
+                className={`rounded-full px-5 py-2 text-xs uppercase tracking-[0.3em] transition ${
+                  activeFilter === filter
+                    ? 'border border-neon/70 bg-neon/15 text-neon shadow-glow'
+                    : 'border border-white/15 text-slate-300 hover:text-white'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {filter}
+              </motion.button>
+            ))}
+          </div>
         </div>
       </div>
 

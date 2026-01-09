@@ -16,7 +16,7 @@ export const profile = {
   resumePath: '/moe-cv.pdf',
   location: 'Cairo, Egypt',
   profile:
-    'Full-Stack Developer at CTC MENA skilled in HTML, CSS, JavaScript, React.js, Three.js, Tailwind, TypeScript, and GitHub. Experienced in C++, building interactive, performance-focused projects, and committed to user-friendly web interfaces. Maintained a 3.8 GPA through continuous learning.',
+    'FrontEnd Developer at CTC MENA skilled in HTML, CSS, JavaScript, React.js, Three.js, Tailwind, TypeScript, and GitHub. Experienced in C++, building interactive, performance-focused projects, and committed to user-friendly web interfaces. Maintained a 3.8 GPA through continuous learning.',
   education: {
     degree: 'Bachelor of Computer Science',
     institution: 'Misr International University',
@@ -36,7 +36,7 @@ export const profile = {
       ],
     },
     {
-      role: 'Full-Stack Web Developer Intern',
+      role: 'FrontEnd Web Developer Intern',
       company: 'CTC MENA',
       timeline: '06/2025 – Present',
       location: 'Cairo, Egypt',
@@ -60,10 +60,10 @@ export const profile = {
   skills: {
     'Front-End Development': ['HTML', 'CSS', 'JavaScript', 'React.js', 'TypeScript', 'Tailwind CSS', 'Framer', 'Zustand'],
     'Mobile Development': ['React Native'],
-    'Back-End Development': ['Node.js', 'Express.js', 'MongoDB', 'SQL'],
+    'Back-End Development': ['Node.js', 'Express.js', 'MongoDB', 'SQL','PHP','Laravel'],
     '3D & Design': ['Spline', 'Three.js', 'Blender'],
     'Programming Languages': ['C++', 'Java', 'Python'],
-    'Project Practices': ['Agile (Scrum)', 'Jira', 'Git & GitHub'],
+    'Project Practices': ['Agile (Scrum)', 'Jira', 'Git & GitHub','Linear'],
     'Soft Skills': ['Active Listening', 'Teamwork', 'Dependability', 'Motivation', 'Flexibility', 'Patience'],
     'Languages': ['Arabic (Native)', 'English (C1)'],
   },

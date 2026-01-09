@@ -48,7 +48,7 @@ const Home = () => {
               pauseDuration={2200}
             />
             <p className="text-lg text-slate-200 md:text-xl">
-              I’m a full-stack developer intern at CTC MENA, passionate about building secure, high-performance web apps and 3D experiences. I specialize in React.js, Three.js, and the MERN stack, and I love turning complex problems into simple, user-friendly solutions. My work blends cyber-security awareness with modern UI/UX, and I’ve helped ship production projects for startups, tech clubs, and freelance clients. I’m always learning, mentoring, and pushing for better code and better teams.
+              I’m a Front-End developer intern at CTC MENA, passionate about building secure, high-performance web apps and 3D experiences. I specialize in React.js, Three.js, and the MERN stack, and I love turning complex problems into simple, user-friendly solutions. My work blends cyber-security awareness with modern UI/UX, and I’ve helped ship production projects for startups, tech clubs, and freelance clients. I’m always learning, mentoring, and pushing for better code and better teams.
             </p>
             <div className="flex flex-wrap gap-4">
               <DownloadResumeButton label="Download Resume" />
