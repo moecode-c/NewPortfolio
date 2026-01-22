@@ -1,12 +1,12 @@
 export const profile = {
   name: 'Mohammed Essam El Din',
   shortName: 'Mohammed Essam',
-  title: 'Software Full-Stack Engineer',
+  title: 'SWE @ El Zatuna | Full-Stack Developer @ Mezatech',
   tagline:
-    'Full-Stack Developer blending cyber-security rigor with immersive interfaces. HTML, CSS, JavaScript, React, Three.js, Tailwind, TypeScript, GitHub, and relentless problem solving.',
+    'Building large-scale platforms with clean, scalable code. Full-stack developer focused on real-world impact, usability, and maintainability.',
   email: 'mohammedessameldincs@gmail.com',
-  phone: '01022138836',
-  website: 'https://mohammedessamportfolio.vercel.app/',
+  phone: '+201022138836',
+  website: 'https://moeportfoliov2.vercel.app/',
   linkedin: 'https://www.linkedin.com/in/mohammed-essam-el-din-716b64364/',
   github: 'https://github.com/moecode-c',
   codeContent: {
@@ -16,13 +16,13 @@ export const profile = {
   resumePath: '/moe-cv.pdf',
   location: 'Cairo, Egypt',
   profile:
-    'FrontEnd Developer at CTC MENA skilled in HTML, CSS, JavaScript, React.js, Three.js, Tailwind, TypeScript, and GitHub. Experienced in C++, building interactive, performance-focused projects, and committed to user-friendly web interfaces. Maintained a 3.8 GPA through continuous learning.',
+    'SWE at El Zatuna and Full-Stack Developer Intern at Mezatech. I enjoy solving real problems, writing clean and scalable code, and building systems that are easy to use and maintain.',
   education: {
     degree: 'Bachelor of Computer Science',
     institution: 'Misr International University',
     timeline: '09/2024 – 08/2028',
     gpa: '3.8',
-    courses: ['Problem Solving', 'Data Structures & Algorithms', 'Object Oriented Programming'],
+    courses: ['Web Development', 'Data Structures & Algorithms', 'Object Oriented Programming'],
   },
   experience: [
     {
@@ -31,8 +31,27 @@ export const profile = {
       timeline: '09/2025 – Present',
       location: 'Cairo, Egypt',
       bullets: [
-        'Supported 100+ students with programming concepts and labs, improving class efficiency by 20%.',
-        'Assisted instructors with grading, material preparation, and hands-on lab facilitation.',
+        'Supported 500+ students in understanding programming concepts and improving assignment completion rates by 20%.',
+      ],
+    },
+    {
+      role: 'Software Engineer',
+      company: 'El Zatuna',
+      timeline: '12/2025 – Present',
+      location: 'Cairo, Egypt',
+      bullets: [
+        'Build and maintain a courses platform serving 1000+ learners using Laravel, PHP, SQL, and Blade.',
+        'Deliver features in an Agile (Scrum) team, improving platform performance and usability.',
+      ],
+    },
+    {
+      role: 'Full-Stack Developer Intern',
+      company: 'Mezatech',
+      timeline: '11/2025 – Present',
+      location: 'Cairo, Egypt',
+      bullets: [
+        'Built web apps with Laravel, PHP, Next.js, and TypeScript using Docker & Docker Compose.',
+        'Collaborated in an Agile team, managing pull requests and completing 40+ tasks via Linear.',
       ],
     },
     {
@@ -58,13 +77,14 @@ export const profile = {
     },
   ],
   skills: {
-    'Front-End Development': ['HTML', 'CSS', 'JavaScript', 'React.js', 'TypeScript', 'Tailwind CSS', 'Framer', 'Zustand'],
+    'Front-End Development': ['HTML', 'CSS', 'JavaScript', 'React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Zustand'],
     'Mobile Development': ['React Native'],
-    'Back-End Development': ['Node.js', 'Express.js', 'MongoDB', 'SQL','PHP','Laravel'],
-    '3D & Design': ['Spline', 'Three.js', 'Blender'],
-    'Programming Languages': ['C++', 'Java', 'Python'],
-    'Project Practices': ['Agile (Scrum)', 'Jira', 'Git & GitHub','Linear'],
-    'Soft Skills': ['Active Listening', 'Teamwork', 'Dependability', 'Motivation', 'Flexibility', 'Patience'],
+    'Back-End Development': ['Node.js', 'Express.js', 'PHP', 'Laravel', 'MongoDB', 'SQL'],
+    'DevOps & Cloud': ['Docker', 'Docker Compose', 'Vercel', 'Netlify', 'Render', 'Cloudflare R2', 'Supabase', 'Git', 'GitHub'],
+    '3D & Design Tools': ['Spline', 'Three.js', 'Blender'],
+    'Programming Languages': ['JavaScript', 'PHP', 'C++', 'Java', 'Python'],
+    'Project Management & Methodologies': ['Agile (Scrum)', 'Jira', 'Linear'],
+    'Soft Skills': ['Active Listening', 'Teamwork', 'Dependability', 'Motivation', 'Flexibility', 'Patience', 'Communication', 'Adaptability', 'Creativity', 'Leadership'],
     'Languages': ['Arabic (Native)', 'English (C1)'],
   },
   references: [
@@ -100,7 +120,7 @@ export const profile = {
       role: 'Content Creator',
       org: 'YouTube / codingtutorialMIU',
       description:
-        '50+ videos covering coding, math, and physics with 50,000 views and 2,000+ watch hours. Beginner-friendly and visually guided content on 20+ topics.',
+        '50+ videos covering coding, mathematics, and physics with 100,000 views and 4,500+ hours of watch time.',
     },
   ],
 }

@@ -41,14 +41,14 @@ const Home = () => {
           <div className="relative space-y-8">
             <p className="text-xs uppercase tracking-[0.6em] text-neon">{profile.title}</p>
             <TextType
-              text={[profile.name, 'Front-End Dev @ CTC MENA', 'Tutor • Coach • Creator']}
+              text={[profile.name, 'SWE @ El Zatuna', 'Full-Stack Dev @ Mezatech', 'Tutor • Coach • Creator']}
               className="text-4xl font-semibold leading-tight text-white md:text-6xl"
               textColors={['#f2f7ff', '#00ffaa', '#00bcd4']}
               variableSpeed={{ min: 35, max: 90 }}
               pauseDuration={2200}
             />
             <p className="text-lg text-slate-200 md:text-xl">
-              I’m a Front-End developer intern at CTC MENA, passionate about building secure, high-performance web apps and 3D experiences. I specialize in React.js, Three.js, and the MERN stack, and I love turning complex problems into simple, user-friendly solutions. My work blends cyber-security awareness with modern UI/UX, and I’ve helped ship production projects for startups, tech clubs, and freelance clients. I’m always learning, mentoring, and pushing for better code and better teams.
+              SWE @ El Zatuna | Full-Stack Developer @ Mezatech. I build and maintain large-scale platforms, enjoy solving real problems, and write clean, scalable code. Experienced in React.js, Laravel, Next.js, TypeScript, PHP, and more. I’ve shipped production projects for startups, tech clubs, and freelance clients, and I’m always learning, mentoring, and pushing for better code and better teams.
             </p>
             <div className="flex flex-wrap gap-4">
               <DownloadResumeButton label="Download Resume" />
