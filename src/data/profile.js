@@ -21,7 +21,7 @@ export const profile = {
     degree: 'Bachelor of Computer Science',
     institution: 'Misr International University',
     timeline: '09/2024 – 08/2028',
-    gpa: '3.8',
+    gpa: '3.7',
     courses: ['Web Development', 'Data Structures & Algorithms', 'Object Oriented Programming'],
   },
   experience: [
@@ -47,7 +47,7 @@ export const profile = {
     {
       role: 'Full-Stack Developer Intern',
       company: 'Mezatech',
-      timeline: '11/2025 – Present',
+      timeline: '11/2025 – 02/2026',
       location: 'Cairo, Egypt',
       bullets: [
         'Built web apps with Laravel, PHP, Next.js, and TypeScript using Docker & Docker Compose.',
@@ -57,7 +57,7 @@ export const profile = {
     {
       role: 'FrontEnd Web Developer Intern',
       company: 'CTC MENA',
-      timeline: '06/2025 – Present',
+      timeline: '06/2025 – 11/2025',
       location: 'Cairo, Egypt',
       bullets: [
         'Built Netflix clone with API integration and responsive UI.',
@@ -78,7 +78,7 @@ export const profile = {
   ],
   skills: {
     'Front-End Development': ['HTML', 'CSS', 'JavaScript', 'React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Zustand'],
-    'Mobile Development': ['React Native'],
+    'Mobile Development': ['React Native',"Expo"],
     'Back-End Development': ['Node.js', 'Express.js', 'PHP', 'Laravel', 'MongoDB', 'SQL'],
     'DevOps & Cloud': ['Docker', 'Docker Compose', 'Vercel', 'Netlify', 'Render', 'Cloudflare R2', 'Supabase', 'Git', 'GitHub'],
     '3D & Design Tools': ['Spline', 'Three.js', 'Blender'],

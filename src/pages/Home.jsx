@@ -105,15 +105,6 @@ const Home = () => {
               shadow-intensity="1"
               style={{ width: '100%', height: '360px' }}
             />
-            <div className="mt-auto rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200">
-              <p className="text-[0.65rem] uppercase tracking-[0.4em] text-neon/80">Currently shipping</p>
-              <ul className="mt-2 space-y-1 text-slate-200">
-                <li>Building a MERN-based e-learning platform for coding skills</li>
-                <li>Launching VisionX: interactive 3D web experiences</li>
-                <li>Delivering security audits for EVO Championship</li>
-                <li>Mentoring and coaching tech club teams</li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
